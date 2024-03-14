@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google"
+import localFont from 'next/font/local'
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+export const century = localFont({ src: '../../public/fonts/centurygothic_bold.ttf' })
+
+export const noto = Noto_Sans({
+  subsets: ["latin", 'cyrillic'],
+  weight: ['300', '400', '500', '700'],
+  variable: "--font-noto",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${noto.className}`}>{children}</body>
     </html>
   );
 }
