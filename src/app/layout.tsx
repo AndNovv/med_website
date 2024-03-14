@@ -1,15 +1,6 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google"
-import localFont from 'next/font/local'
 import "./globals.css";
-
-export const century = localFont({ src: '../../public/fonts/centurygothic_bold.ttf' })
-
-export const noto = Noto_Sans({
-  subsets: ["latin", 'cyrillic'],
-  weight: ['300', '400', '500', '700'],
-  variable: "--font-noto",
-})
+import { noto } from "./font/font";
 
 export const metadata: Metadata = {
   title: "Create Next App",
