@@ -9,6 +9,7 @@ import TitleDecoration from '@/app/icons/TitleDecoration'
 import ConcludingInfoCard from './ConcludingInfoCard'
 import ConclusionLeft from '@/app/icons/ConclusionLeft'
 import ConclusionRight from '@/app/icons/ConclusionRight'
+import ConclusionMobile from '@/app/icons/ConclusionMobile'
 
 const infoCardsContent = [
     {
@@ -46,7 +47,7 @@ const MainCard = () => {
 
             <section className='relative'>
                 <TitleDecoration />
-                <div className='relative px-11 z-10 mt-3'>
+                <div className='relative lg:px-11 px-7 z-10 mt-3'>
                     <h1 className={cn('text-3xl text-[2rem] text-[#01457A] font-bold', century.className)}>ХОБЛ: мифы и реальность</h1>
                     <div className='flex flex-col gap-7 mt-16'>
                         <PopoverCard cardIcon={<Human />} title={<p>ХОБЛ болеют <span className='font-bold'>преимущественно мужчины?</span></p>} contentText={'В десятилетнем исследовании «Генетическая эпидемиология ХОБЛ» (COPDGene) среди пациентов с ХОБЛ, диагностированной до 55 лет, было выявлено преобладание...'} cardIndex={1} />
@@ -57,18 +58,18 @@ const MainCard = () => {
 
             <section className='mt-[6.5rem] relative'>
                 <TitleDecoration />
-                <div className='relative px-11 z-10'>
+                <div className='relative lg:px-11 px-7 z-10'>
                     <h1 className={cn('text-[#01457A] text-custom font-bold text-[2rem] mt-2', century.className)}>Терапия ХОБЛ: что в фокусе?</h1>
-                    <div className='flex justify-center items-center text-2xl h-[4.2rem] rounded-2xl mt-[3.75rem] p-auto bg-gradient-to-r from-[#FDD966] to-[#BCD77E] to-70%'>
-                        <p className='text-[1.35rem] text-center font-bold'>Даже 1 среднетяжелое обострение — сигнал к увеличению объема терапии</p>
+                    <div className='flex justify-center items-center lg:h-[4.2rem] h-fit lg:py-0 py-2 rounded-2xl lg:mt-[3.75rem] mt-12 px-2 bg-gradient-to-r from-[#FDD966] to-[#BCD77E] to-70%'>
+                        <p className='lg:text-[1.35rem] text-[1.1rem] text-center font-bold'>Даже 1 среднетяжелое обострение — сигнал к увеличению объема терапии</p>
                     </div>
-                    <h3 className='text-[1.2rem] font-bold text-center mt-8'>Приоритетные направления фармакотерапевтической стратегии при ХОБЛ<sup>1</sup>:</h3>
-                    <div className='gap-6 mt-10 grid grid-cols-3'>
+                    <h3 className='lg:text-[1.2rem] text-base font-bold text-center md:mt-8 mt-6'>Приоритетные направления фармакотерапевтической стратегии при ХОБЛ<sup>1</sup>:</h3>
+                    <div className='lg:gap-6 gap-4 mt-10 grid md:grid-cols-3 md:grid-rows-none grid-rows-3'>
                         {infoCardsContent.map((cardInfo, index) => {
                             return <InfoCard cardInfo={cardInfo} key={`card${index}`} />
                         })}
                     </div>
-                    <div className='relative grid grid-cols-2 gap-4 mt-1'>
+                    <div className='relative grid-cols-2 gap-4 mt-1 hidden md:grid'>
                         <div className='relative'>
                             <ConclusionLeft />
                         </div>
@@ -76,7 +77,10 @@ const MainCard = () => {
                             <ConclusionRight />
                         </div>
                     </div>
-                    <div className='gap-6 mt-6 grid grid-cols-2 mb-20'>
+                    <div className='flex relative items-center mt-1 justify-center w-full md:hidden'>
+                        <ConclusionMobile />
+                    </div>
+                    <div className='md:gap-6 gap-4 md:mt-6 mt-8 grid md:grid-cols-2 grid-rows-2 md:grid-rows-none mb-20'>
                         {concludingCardsInfo.map((concludingCardInfo, index) => {
                             return <ConcludingInfoCard cardInfo={concludingCardInfo} key={`card${index}`} />
                         })}

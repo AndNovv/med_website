@@ -32,11 +32,11 @@ const cardsData = [
 
 const SecondMythDetails = () => {
     return (
-        <div className='bg-white rounded-2xl shadow-xl shadow-slate-400 p-8 border border-[#01457A] text-[#01457A]'>
-            <p className='mb-1'>{data.paragraph1}</p>
-            <p className='mb-5'>{data.paragraph2}</p>
-            <h3 className='text-lg font-bold text-center mb-4'>Пятилетняя выживаемость пациентов</h3>
-            <div className='grid grid-cols-3 gap-8'>
+        <div className='bg-white rounded-2xl shadow-xl shadow-slate-400 md:p-8 sm:p-6 p-4 border border-[#01457A] text-[#01457A]'>
+            <p className='mb-1 md:text-base text-sm'>{data.paragraph1}</p>
+            <p className='mb-5 md:text-base text-sm'>{data.paragraph2}</p>
+            <h3 className='md:text-lg text-base font-bold text-center mb-4'>Пятилетняя выживаемость пациентов</h3>
+            <div className='grid sm:grid-cols-3 lg:gap-8 gap-3 grid-rows-3 sm:grid-rows-none'>
                 {cardsData.map((cardData, index) => {
                     return <SecondMythDataCard cardData={cardData} key={`DetailsCard${index}`} />
                 })}

@@ -8,9 +8,9 @@ const data = {
 
 const FirstMythDetails = () => {
     return (
-        <div className='bg-white rounded-2xl shadow-custom p-8 border border-[#01457A] text-[#01457A]'>
-            <p className='mb-1'>{data.paragraph1}</p>
-            <p className='mb-10'>{data.paragraph2}</p>
+        <div className='bg-white rounded-2xl shadow-custom md:p-8 sm:p-6 p-4 border border-[#01457A] text-[#01457A]'>
+            <p className='mb-1 md:text-base text-sm'>{data.paragraph1}</p>
+            <p className='md:mb-10 mb-4 md:text-base text-sm'>{data.paragraph2}</p>
             <Graph />
         </div>
     )

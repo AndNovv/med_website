@@ -15,11 +15,11 @@ const PopoverCard = ({ cardIcon, title, contentText, cardIndex }: { cardIcon: Re
     return (
         <Popover>
             <PopoverTrigger asChild>
-                <div className='hover:scale-[1.02] transition-all relative flex w-full px-7 mx-auto rounded-3xl shadow-custom h-40 py-8 border border-[#01457A] gap-5 cursor-pointer'>
-                    <div className='h-16 w-16 rounded-b-full rounded-tr-full bg-gradient-to-r from-[#FDD966] to-[#BCD77E] flex justify-center items-center'>
+                <div className='hover:scale-[1.02] transition-all relative flex w-full md:px-7 px-4 mx-auto rounded-3xl shadow-custom md:h-40 md:py-8 h-36 py-6 border border-[#01457A] md:gap-5 gap-2 cursor-pointer'>
+                    <div className='h-16 w-16 shrink-0 rounded-b-full rounded-tr-full bg-gradient-to-r from-[#FDD966] to-[#BCD77E] flex justify-center items-center'>
                         {cardIcon}
                     </div>
-                    <div className='relative'>
+                    <div className='relative h-[90%] md:h-full'>
                         <svg height="100%" viewBox="0 0 297 116" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M254.139 115H0V0.5H254.139L295 50.3145L254.139 115Z" fill="url(#gradientMain)" />
                             <path d="M0 114.5H254.139L295 50.5L254.139 1" stroke="url(#StrokeGradient)" strokeWidth="3" />
@@ -37,10 +37,10 @@ const PopoverCard = ({ cardIcon, title, contentText, cardIndex }: { cardIcon: Re
                             </defs>
                         </svg>
 
-                        <h2 className='absolute z-10 top-1 text-[1.2rem] pr-10 leading-snug'>{title}</h2>
+                        <h2 className='absolute z-10 top-1 md:text-[1.2rem] text-[1.1rem] pr-10 leading-snug'>{title}</h2>
                     </div>
-                    <div className='relative flex-1 overflow-hidden leading-5'>
-                        <p className='text-xl'>{contentText}</p>
+                    <div className='relative flex-1 overflow-hidden leading-5 invisible md:visible'>
+                        <p className='text-lg'>{contentText}</p>
                         <div className='absolute top-0 w-full h-full bg-gradient-to-b from-[#fff0] to-[#ffffff] from-40%'></div>
                     </div>
                     <div className={cn(cardIndex === 1 ? 'bg-[#01457A]' : 'bg-[#BCD77E]', 'absolute flex justify-center items-center w-10 h-10 rounded-full -top-5 -right-5')}>
@@ -50,7 +50,7 @@ const PopoverCard = ({ cardIcon, title, contentText, cardIndex }: { cardIcon: Re
                     </div>
                 </div>
             </PopoverTrigger>
-            <PopoverContent className='w-[800px]'>
+            <PopoverContent className='lg:w-[800px] md:w-[600px] sm:w-[600px] w-[300px]'>
                 {cardIndex === 1 && <FirstMythDetails />}
                 {cardIndex === 2 && <SecondMythDetails />}
             </PopoverContent>

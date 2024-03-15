@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageDecoration = () => {
     return (
-        <svg className='absolute top-0 left-0 max-w-[85%] min-h-fit' viewBox="0 0 1650 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className='absolute top-0 md:left-0 -left-[40rem] md:max-w-[85%] md:min-h-fit min-h-[70px]' viewBox="0 0 1650 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1049.8 28.1798C928.415 20.2465 701.144 -7.99995 610.5 0.5L659.987 -17H1649.5C1582.8 91.3744 1201.52 38.0964 1049.8 28.1798Z" fill="url(#paint0_linear_0_1)" />
             <path d="M937 49.2851C826.477 41.3522 617.036 23.7704 534.5 32.27L572.5 0H1473.5C1412.77 108.37 1075.15 59.2014 937 49.2851Z" fill="url(#paint1_linear_0_1)" />
             <path d="M732.913 53.5282C465 0 82.3517 59.5426 0 66.7599V0H1247C1186.4 92.0203 917.46 90.4002 732.913 53.5282Z" fill="url(#paint2_linear_0_1)" />
